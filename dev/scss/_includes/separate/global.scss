@@ -1,0 +1,22 @@
+.l-wrapper{
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.container{
+	max-width: 183rem;
+}
+h1,
+.h1{
+	font-size: 8.828rem;
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+	//@include media-breakpoint-down(md) {
+	//	font-size: 6rem;
+	//}
+	//@include media-breakpoint-down(xs) {
+	//	font-size: 4rem;
+	//}
+}

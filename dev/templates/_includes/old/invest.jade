@@ -1,0 +1,42 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+include _includes/components/c-pt-work/c-pt-work
+include _includes/components/c-invest-and-get/c-invest-and-get
+include _includes/components/c-vetting-process/c-vetting-process
+include _includes/components/c-why-we/c-why-we
+
+block head
+    +head({'title':'services'})
+block header
+    +header()
+
+block content
+    +c-head({
+        logo: 's/images/useful/invest/logo-trade-investors.png',
+        class: 'has-logo',
+        bg: 's/images/useful/invest/header.png',
+        title: 'Invest<br>in the future',
+        subTitle: 'A slight twist on ‘About us’ in the intro here, turning it back on the reader,to enact a feeling of camaraderie, progress.',
+        trigger: 'Active ICOs'
+    })
+    +c-invest-and-get()
+    +c-vetting-process()
+    +c-why-we()
+    +c-sr-feedback({
+        class: 'is-gray',
+        bg: 's/images/useful/feedback/infographic.png',
+        hideImage: true,
+        title: 'Be the first<br>to know.',
+        form: {
+            title: 'CONTACT OUR ICO TEAM',
+            submit: 'GET STARTED'
+        }
+    })
+block footer
+    .h-without-anim
+        +c-fp-footer()

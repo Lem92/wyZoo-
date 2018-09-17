@@ -1,0 +1,28 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+include _includes/components/c-pt-work/c-pt-work
+include _includes/components/c-sign-up/c-sign-up
+
+
+block head
+    +head({'title':'About Us'})
+block header
+    +header()
+
+block content
+    +c-head({
+        bg: 's/images/useful/sign-up/header.png',
+        title: 'REGISTER FOR TRADE.IO'
+    })
+    +c-sign-up({
+        step: 2
+    })
+
+block footer
+    .h-without-anim
+        +c-fp-footer()

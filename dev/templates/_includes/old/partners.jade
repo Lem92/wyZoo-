@@ -1,0 +1,52 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+include _includes/components/c-pt-work/c-pt-work
+
+block head
+    +head({'title':'services'})
+block header
+    +header()
+
+block content
+    +c-head({
+        bg: 's/images/useful/services/header.png',
+        title: 'Join us',
+        subTitle: 'Crypto is one of the most exciting new industries for online partners, with the prospect of high growth and huge earnings. Join us—we’ll help you seize them.',
+        trigger: 'JOIN NOW'
+    })
+    +c-sr-advantages({
+        class: 'is-style-two',
+        items: [
+            {
+                img: 's/images/useful/services/advantages/4.png',
+                title: 'Instant<br>payouts',
+                desc: 'Get paid as soon as trades happen—no waiting till the end of the month.'
+            },
+            {
+                img: 's/images/useful/services/advantages/5.png',
+                title: '3 revenue<br>streams ',
+                desc: 'Refer people to our platform, send them to the Education page on our website, or sell event tickets.'
+            },
+            {
+                img: 's/images/useful/services/advantages/6.png',
+                title: 'Less work, more<br>conversions',
+                desc: 'We give you resources that get high conversion rates, from videos to web banners.'
+            }
+        ]
+    })
+    +c-pt-work()
+    +c-sr-feedback({
+        title: 'Talk to our<br>Partnerships team',
+        form: {
+            title: 'CONTACT OUR ICO TEAM',
+            submit: 'GET STARTED'
+        }
+    })
+block footer
+    .h-without-anim
+        +c-fp-footer()

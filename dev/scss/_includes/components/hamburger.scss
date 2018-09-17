@@ -1,0 +1,86 @@
+.c-hamburger {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 39px;
+    height: 46px;
+    font-size: 0;
+    text-indent: -9999px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.c-hamburger:focus {
+    outline: none;
+}
+
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 18px;
+    height: 6px;
+    background: #ee4e4a;
+    right: 0;
+    left: 0px;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #ee4e4a;
+    content: "";
+}
+.c-hamburger span::after{
+    width: 50%;
+    left: 50%;
+}
+.c-hamburger span::before {
+    top: -10px;
+}
+
+.c-hamburger span::after {
+    bottom: -10px;
+}
+
+.c-hamburger--htx span {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* состояние active при открытом меню  */
+.c-hamburger--htx.is-active span {
+    background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+    width: 100%;
+    left: 0%;
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,33 @@
+{
+  "name": "jade_30.06.16",
+  "description": "template for team",
+  "main": "gulpfile.js",
+  "authors": [
+    "Geniusee"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "svg4everybody": "^2.1.4",
+    "perfect-scrollbar": "^0.6.16",
+    "animate.css": "^3.5.2",
+    "moff": "^1.11.1",
+    "fullpage.js": "^2.9.7",
+    "slick-carousel": "^1.8.1",
+    "ion.rangeSlider": "^2.2.0",
+    "jquery-ui": "^1.12.1"
+  },
+  "install": {
+    "path": {
+      "css": "dev/less/plugins",
+      "js": "dev/js/plugins"
+    }
+  }
+}

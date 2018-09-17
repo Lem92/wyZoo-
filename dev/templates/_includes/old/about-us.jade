@@ -1,0 +1,28 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+include _includes/components/c-catalog/c-catalog
+include _includes/components/c-event-dialog/c-event-dialog
+include _includes/components/c-team/c-team
+include _includes/components/c-team-dialog/c-team-dialog
+
+block head
+    +head({'title':'events'})
+block header
+    +header()
+
+block content
+    +c-head({
+        bg: 's/images/useful/head/about-us.png',
+        title: 'We’re for the<br>crypto community',
+        subTitle: 'We’re here for the trading enthusiasts. The investment newbies. The blockchain experts. The crypto curious. For you all.'
+    })
+    +c-team()
+    +c-team-dialog()
+block footer
+    .h-without-anim
+        +c-fp-footer()

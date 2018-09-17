@@ -1,0 +1,91 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+
+block head
+    +head({'title':'services'})
+block header
+    +header()
+
+block content
+    +c-head({
+        bg: 's/images/useful/services/header.png',
+        title: 'Our ICO<br>strategy service',
+        subTitle: 'In our two month ICO, we raised $31 million. Now it’s your turn to get funded – with our comprehensive ICO service.',
+        trigger: 'CONTACT ICO TEAM'
+    })
+    +c-sr-advantages({
+        title: 'Expertise. Connections.<br>And context.',
+        items: [
+            {
+                img: 's/images/useful/services/advantages/1.png',
+                title: 'Depth & breadth<br>of expertise',
+                desc: 'Our team aren’t just crypto experts – they have decades of experience in finance and investment, too.'
+            },
+            {
+                img: 's/images/useful/services/advantages/2.png',
+                title: 'Massive<br>network',
+                desc: 'We’ll connect you to a community of investors, and to leading professionals in both the crypto and corporate worlds.'
+            },
+            {
+                img: 's/images/useful/services/advantages/3.png',
+                title: 'Complete<br>understanding',
+                desc: 'We know the whole ICO process inside out, from start to finish. We’ll guide you through every step.'
+            }
+        ]
+    })
+    +c-sr-steps({
+        title: 'From advice to <br>launch & beyond:<br>a comprehensive service',
+        subTitle: 'Choose any or all of the services below, or get in touch to talk about exactly what you need.',
+        items: [
+            {
+                img: '1',
+                title: 'Engage with<br>your audience',
+                desc: 'We’ll support your branding and telegram comms, and help you build an engaging social media strategy. So you can get investors interested – and get people talking.',
+            },
+            {
+                img: '2',
+                title: 'Create a<br>robust smart<br>contract',
+                desc: 'We’ll help you create a smart contract to the highest standard, to meet industry best practice and keep your new funds secure.',
+            },
+            {
+                img: '3',
+                title: 'Audit your<br>tokens',
+                desc: 'Working with leading independent security firms, our security team will get you a rigorous security audit. So you can offer your token holders the best liquidity, and access listings on top exchanges – including tade.io.',
+            },
+            {
+                img: '4',
+                title: 'Recruit advisors<br>& influencers',
+                desc: 'Use our network to recruit experts across sectors and specialties – from marketing, to IT, to customer support. We’ll rigorously vet each potential advisor for you, with background checks and application tests tailored to your ICO’s exact needs.',
+            },
+            {
+                img: '5',
+                title: 'Write a white<br>paper that<br>resonates',
+                desc: 'Get buy-in and backing from the crypto community. We’ll help you translate your ideas into a professional format that both informs and inspires people.',
+            },
+            {
+                img: '6',
+                title: 'Get informed<br>insight',
+                desc: 'When we emerged from our own ICO, we’d learnt so many things we wished we’d known from the start. We’ll pass our invaluable insights to you from the beginning.',
+            },
+            {
+                img: '7',
+                title: 'Access the Trade.io<br>community',
+                desc: 'We’ve spent decades building a powerful, influential network – you can start using it today. Access our community of more than 10,000 people, and with our support, promote your ICO and find active investors quickly and efficiently.',
+            }
+        ]
+    })
+    +c-sr-feedback({
+        title: 'Our ICO team<br>is ready & waiting',
+        form: {
+            title: 'CONTACT OUR ICO TEAM',
+            submit: 'SEND'
+        }
+    })
+block footer
+    .h-without-anim
+        +c-fp-footer()

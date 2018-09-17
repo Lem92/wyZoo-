@@ -1,0 +1,26 @@
+//-----------   INCLUDES   --------------
+
+//- helpers
+include ../helpers/paths
+include ../helpers/_mixins
+
+//- components
+include ../components/head/head
+include ../components/header/header
+include ../components/footer/footer
+
+//-----------   INCLUDES END  --------------
+
+doctype html
+html(lang='en')
+	block head
+		+head({'title':'Hello'})
+	body
+		.l-wrapper
+			block header
+				+header()
+			block content
+			block footer
+				+footer()
+			
+		script(src=route.js + "main.js")

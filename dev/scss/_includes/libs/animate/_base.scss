@@ -1,0 +1,131 @@
+// fadeIn
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.fadeIn {
+	animation-name: fadeIn;
+}
+
+// slideInDown
+@keyframes slideInDown {
+	from {
+		transform: translate3d(0, -100%, 0);
+		opacity: 0;
+		visibility: visible;
+	}
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+.slideInDown {
+	animation-name: slideInDown;
+}
+
+// slideInUp
+@keyframes slideInUp {
+	from {
+	  transform: translate3d(0, 100%, 0);
+	  visibility: visible;
+	  opacity: 0;
+	}
+  
+	to {
+	  transform: translate3d(0, 0, 0);
+	  opacity: 1;
+	}
+}
+  
+.slideInUp {
+	animation-name: slideInUp;
+}
+
+// slideInLeft
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+// slideInRight
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+// zoomIn
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes rotating-revert {
+	from {
+			transform: rotate(0deg);
+	}
+	to {
+			transform: rotate(-360deg);
+	}
+}
+@keyframes rotating {
+	from {
+			transform: rotate(0deg);
+	}
+	to {
+			transform: rotate(360deg);
+	}
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.animated.infinite {
+	animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+	animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+	animation-duration: .75s;
+}

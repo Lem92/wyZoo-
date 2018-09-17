@@ -1,0 +1,166 @@
+.section-third{
+    background: #E6E6E6;
+    position: relative;
+    .red-square{
+        width: 245px;
+        height: 248px;
+        background-color: #d64743;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1111;
+    }
+    .section-third__content{
+        position: absolute;
+        bottom: 0;
+        background: #fff;
+        width: calc(100% - 390px);
+        padding-left: 550px;
+        padding-top: 65px;
+        padding-bottom: 65px;
+        padding-right: 30px;
+    }
+    .section-third__title-top{
+        font-family: GothamPro-Black;
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1613;
+    }
+    h2.section-third__title-bottom{
+        font-family: GothamPro-Black;
+        font-size: 36px;
+        color: #d64743;
+    }
+    p.section-third__description{
+        margin-top: 35px;
+        margin-bottom: 22px;
+        font-family: GothamPro;
+        font-size: 18px;
+        line-height: 1.67;
+        color: #1a1613;
+    }
+    .under-description{
+        font-family: GothamPro;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.88;
+        letter-spacing: 4.8px;
+        display: inline-block;
+        color: #010101;
+        position: relative;
+        text-transform: uppercase;
+        span, a{
+            color: #d64743;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 169px;
+            height: 1px;
+            background-color: #d64743;
+            right: -200px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .tab-section{
+        position: relative;
+        min-height: 225px;
+        .tab-circles{
+            width: 73px;
+            position: absolute;
+            left: -96px;
+            .tab{
+                cursor: pointer;
+                width: 25px;
+                height: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: solid 1px #c9c9c9;
+                font-family: Gotham-ultra;
+                font-size: 11.5px;
+                line-height: normal;
+                color: #dfdfdf;
+                &:not(:last-child){
+                    margin-bottom: 13px;
+                }
+                &.active{
+                    width: 73px;
+                    height: 73px;
+                    font-size: 36.5px;
+                    border-color: #d64743
+                }
+            }
+        }
+        .tab-content{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+        .tab__header{
+            font-family: GothamPro-Black;
+            font-size: 18px;
+            line-height: 1.67;
+            letter-spacing: 4.7px;
+            color: #201e1e;
+            padding-bottom: 15px;
+            position: relative;
+            text-transform: uppercase;
+            margin-top: 20px;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 169px;
+                height: 1px;
+                background-color: #d64743;
+                bottom: 0;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+        .tab__description{
+            margin-top: 10px;
+            font-family: GothamPro;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #201e1e;
+        }
+    }
+    .nav-wrap{
+        .number-of-pages{
+            color: #d7d4d4;
+        }
+    }
+}
+@media (max-width: 1600px){
+    .hidden-1600{
+        display: none !important
+    }
+    .under-description{
+        &:after{
+            width: 109px;
+            right: -140px;
+        }
+    }
+}
+@media (max-width: 1400px){
+    .section-third{
+        .section-third__content{
+            width: calc(100% - 190px);
+            padding-left: 450px;
+        }
+        .under-description{
+            &:after{
+                width: 109px;
+                right: -120px;
+            }
+        }
+    }
+}

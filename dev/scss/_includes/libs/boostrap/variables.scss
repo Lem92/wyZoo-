@@ -1,0 +1,106 @@
+// Variables
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the Bootstrap defaults without modifying key, versioned files.
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Table of Contents
+//
+// Custom Color system
+$scorpion: #585858;
+$black: #000;
+$pacific-blue: #00a8be;
+$bay-of-many: #2b3689;
+$bunting: #17194e;
+$hint-of-red: #f7f5f5;
+$gray: #7f7f7f;
+// Color system
+// Options
+// Spacing
+// Body
+  //
+  // Settings for the `<body>` element.
+
+  $body-bg:       $white;
+  $body-color:    $bunting;
+
+// Links
+  //
+  // Style anchor elements.
+
+  $link-decoration:       underline;
+  $link-hover-decoration: none;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 788px,
+  md: 1012px,
+  lg: 1260px,
+  xl: 1940
+);
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid containers
+$container-max-widths: (
+  sm: 768px,
+  md: 992px,
+  lg: 1240px,
+  xl: 1920px
+);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid columns
+
+$grid-columns: 24;
+$grid-gutter-width: 0;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: "Montserrat", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-base:       $font-family-sans-serif;
+
+$headings-font-family: "Montserrat";
+
+$font-size-base: 1.4rem; // Assumes the browser default, typically `14px`
+
+$line-height-base: 2.14285714;
+
+$h1-font-size: 3.6rem;
+$h2-font-size: 2.6rem;
+$h3-font-size: 2.4rem;
+$h4-font-size: 2rem;
+$h5-font-size: 1.8rem;
+$h6-font-size: 1.6rem;
+
+// Components
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Z-index master list
+// Navs
+// Navbar
+// Pagination
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Badges
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code

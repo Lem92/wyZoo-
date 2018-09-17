@@ -1,0 +1,9 @@
+extends _includes/_extends/main
+
+include _includes/components/somecomponent/somecomponent
+
+
+block content
+	.c-fullpage.c-full.js-fullpage
+		+somecomponent()
+	.c-full__scrolltop.js-scrolltop-trigeer

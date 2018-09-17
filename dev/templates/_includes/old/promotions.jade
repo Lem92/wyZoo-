@@ -1,0 +1,81 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+include _includes/components/c-catalog/c-catalog
+include _includes/components/c-event-dialog/c-event-dialog
+
+block head
+	+head({'title':'events'})
+block header
+	+header()
+
+block content
+	+c-head({
+		bg: 's/images/tmp_file/promo/header.png',
+		title: 'Promotions',
+		subTitle: 'Airdrops. Giveaways. Prizes. Free travel. Get all these and more with the latest promotions and offers from trade.io.'
+	})
+	.c-education.js-event
+		.container
+			.c-education__row
+				mixin c-education__col(a)
+					.c-education__col.js-thumb
+						.c-education__thumb.is-fully
+							a.c-education__thumb__inner(href="#")
+								.c-education__thumb__caption
+									strong.c-education__thumb__icon: img(src=a.img, alt="")
+									strong.c-education__thumb__title=a.title
+									p.c-education__thumb__decs=a.desc
+							.c-education__thumb__footer
+								a.c-btn.c-btn_xl.c-btn_pacific-blue-gradient.is-white(href="#")
+									span LOREM IPSUM
+				+c-education__col({
+					img: 's/images/tmp_file/promo/thumb/1.png',
+					title: 'AIRDROPS',
+					desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				})
+				+c-education__col({
+					img: 's/images/tmp_file/promo/thumb/2.png',
+					title: 'COMPETITIONS',
+					desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				})
+				+c-education__col({
+					img: 's/images/tmp_file/promo/thumb/3.png',
+					title: 'GIVEAWAYS',
+					desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				})
+				+c-education__col({
+					img: 's/images/tmp_file/promo/thumb/4.png',
+					title: 'FREE TRAVEL',
+					desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				})
+	+c-event-dialog({
+		hide: true,
+		img: 's/images/tmp_file/promo/1.png',
+		title: 'lorem ipsum',
+		desc: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>',
+		similar: {
+			title: 'SIMILAR EVENTS',
+			items: [
+				{
+					img: 's/images/tmp_file/promo/2.png'
+				},
+				{
+					img: 's/images/tmp_file/promo/3.png'
+				},
+				{
+					img: 's/images/tmp_file/promo/4.png'
+				},
+				{
+					img: 's/images/tmp_file/promo/5.png'
+				}
+			]
+		}
+	})
+block footer
+	.h-without-anim
+		+c-fp-footer()

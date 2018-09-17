@@ -1,0 +1,175 @@
+$white-two: #e5e5e5;
+$pale-red: #d64743;
+$black: #1b1613;
+
+@include font-face('Montserrat', 'Montserrat-Bold');
+@include font-face('GothamPro-Black', 'GothamPro-Black');
+@include font-face('Gotham-ultra', 'gotham-ultra');
+@include font-face('GothamPro', 'GothamPro');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+h1, h2{
+    margin: 0;
+}
+button{
+    background: none
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.mt-60{
+    margin-top: 70px;
+}
+.mt-70{
+    margin-top: 60px;
+}
+.pt-55{
+    padding-top: 55px;
+}
+.ptb-30{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.h-100per{
+    height: 100%;
+}
+.section{
+    overflow: hidden;
+}
+.section__menu-wrap{
+    padding-top: 43px;
+    padding-bottom: 94px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 190px;
+    border-left: 1px solid #fff;
+    z-index: 99999;
+    &.menu-black-block{
+        .scroll-text{
+            color: #ffffff;
+            opacity: 1;
+            transition: 0.1s;
+        }
+        .c-hamburger span,
+        .c-hamburger span::before,
+        .c-hamburger span::after {
+            background: #fff;
+        }
+        .c-hamburger--htx.is-active span {
+            background: none;
+        }
+    }
+    .scroll-text{
+        transition: 0.1s;
+        width: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0.6;
+        font-family: GothamPro;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(28, 24, 20, 0.6);
+    }
+    .arrow{
+        img{
+            width: 37px;
+        }
+    }
+}
+.section-logo{
+    width: 169px;
+    position: absolute;
+    top: 51px;
+    z-index: 11111;
+    left: 72px;
+}
+.nav-wrap{
+    position: absolute;
+    width: 59px;
+    height: 240px;
+    z-index: 111;
+    top: 50%;
+    left: calc(100% - 1611px);
+    transform: translateY(-50%);
+    .number-of-pages{
+        margin-top: 58px;
+        font-family: Montserrat;
+        font-size: 56px;
+        color: #fff;
+        transform: rotate(-90deg);
+    }
+    .dots-wrap{
+        position: absolute;
+        left: 50%;
+        top: 180px;
+        transform: translateX(-50%);
+        .dot{
+            width: 3px;
+            height: 3px;
+            background: #c2c4c5;
+            border-radius: 50%;
+            margin: 0 auto;
+            &:not(:last-child){
+                margin-bottom: 27px;
+            }
+            &.active{
+                width: 5px;
+                height: 5px;
+                background-color: #d64743;
+            }
+            &.loading{
+                background: transparent;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                position: relative;
+                border: 2px solid rgba(255,255,255, 0.2);
+                &:after{
+                    box-sizing: border-box;
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: -2px;
+                    left: -2px;
+                    width: 22px;
+                    height: 22px;
+                    border-top: 2px solid #fff;
+                    border-bottom: 2px solid transparent;
+                    border-left: 2px solid transparent;
+                    border-right: 2px solid transparent;
+                    border-radius: 50%;
+                    animation-name: loading-after;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+            }
+            @keyframes loading-after {
+                0%   {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

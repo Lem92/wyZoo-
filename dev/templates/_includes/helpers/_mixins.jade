@@ -1,0 +1,5 @@
+mixin svg(ttl, advClass)
+	- ttl ? ttl : ttl = ""
+	- advClass ? advClass : advClass = ""
+	svg.icon(class=ttl + ' ' + advClass, width="1em", height="1em")
+		use(xlink:href='#' + ttl)

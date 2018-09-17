@@ -1,0 +1,26 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+include _includes/components/c-catalog/c-catalog
+include _includes/components/c-event-dialog/c-event-dialog
+include _includes/components/c-education/c-education
+
+block head
+    +head({'title':'events'})
+block header
+    +header()
+
+block content
+    +c-head({
+        bg: 's/images/useful/head/education.jpg',
+        title: 'Education',
+        subTitle: 'For everything you ever wanted to know about crypto – and more. Browse our eBooks, glossary, videos, webinars and courses, or sign up for one of our seminars in a city near you.'
+    })
+    +c-education()
+block footer
+    .h-without-anim
+        +c-fp-footer()

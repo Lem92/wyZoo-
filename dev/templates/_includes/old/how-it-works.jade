@@ -1,0 +1,59 @@
+extends _includes/_extends/main
+include _includes/components/c-services/c-services
+include _includes/components/c-head/c-head
+include _includes/components/c-fp-footer/c-fp-footer
+include _includes/components/c-sr-advantages/c-sr-advantages
+include _includes/components/c-sr-steps/c-sr-steps
+include _includes/components/c-sr-feedback/c-sr-feedback
+include _includes/components/c-catalog/c-catalog
+include _includes/components/c-event-dialog/c-event-dialog
+include _includes/components/c-education/c-education
+include _includes/components/c-calc-earn/c-calc-earn
+
+block head
+    +head({'title':'events'})
+block header
+    +header()
+
+block content
+    +c-head({
+        bg: 's/images/useful/how-it-works/header.png',
+        title: 'Join the Liquidity Pool<br>Earn more',
+        subTitle: 'Join our liquidity pool with 2,500 TIOs. And every day, you’ll get paid interest, straight to your wallet.',
+        trigger: 'JOIN US'
+    })
+    +c-sr-steps({
+        class: 'is-restyled',
+        title: 'How it works',
+        items: [
+            {
+                img: '1',
+                title: 'We put in<br>the seed capital',
+                desc: ': $50 million USD and 50 million TIOs.',
+            },
+            {
+                img: '2',
+                title: 'You put in<br>2,500 TIOs',
+                desc: 'or more. And so does everyone else  – it all goes in the pool.',
+            },
+            {
+                img: '3',
+                title: 'We put in 50% of<br>our funds generated<br>from every<br>revenue stream.',
+                desc: 'From spreads to risk positions. Even transaction and ¬¬placement fees go in.',
+            },
+            {
+                img: '4',
+                title: 'Every day,<br>you get interest ',
+                desc: 'based on what the pool generates and how many other people are in with you. And if you’ve contributed more, you get a higher percentage back.',
+            },
+            {
+                img: '5',
+                title: 'You stay<br>in control',
+                desc: 'If the exchange makes a loss, nothing gets deducted from your wallet.  And you can leave the pool and retrieve your tokens whenever you like.',
+            }
+        ]
+    })
+    +c-calc-earn()
+block footer
+    .h-without-anim
+        +c-fp-footer()

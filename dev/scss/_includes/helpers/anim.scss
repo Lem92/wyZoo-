@@ -1,0 +1,9 @@
+.h-anim{
+    visibility: hidden;
+    .h-without-anim &{
+        visibility: visible;
+    }
+    &.is-loaded{
+        visibility: visible;
+    }
+}

@@ -1,0 +1,30 @@
+//html {
+//	height: 100%;
+//	font-size: calc(100vw / 240);
+//	@media (max-width : 1919px) {
+//		font-size: calc(100vw / 220);
+//	}
+//	@include media-breakpoint-down(md) {
+//		font-size: calc(100vw * 10 / 1400);
+//	}
+//	@include media-breakpoint-down(xs) {
+//		// font-size: calc(100vw * 10 / 500);
+//		font-size: 8px;
+//	}
+//	&.disable-zoom-xs {
+//		@include media-breakpoint-down(xs) {
+//			// font-size: 10px;
+//		}
+//	}
+//
+//}
+//body {
+//	position: relative;
+//	-webkit-font-smoothing: antialiased;
+//	-moz-osx-font-smoothing: grayscale;
+//	min-height: 100%;
+//}
+//img{
+//	max-width: 100%;
+//	height: auto;
+//}
