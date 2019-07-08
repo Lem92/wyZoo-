@@ -2,6 +2,7 @@ var gulp                 = require('gulp'),
     fs                   = require('fs'),    
     file                 = require('gulp-file'),
     insert               = require('gulp-insert');
+//hello
 
 // COMPONENT=<new_component_name> gulp create
 var component_name = 'c-FP-journey';
